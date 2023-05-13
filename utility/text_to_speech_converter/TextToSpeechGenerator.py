@@ -19,4 +19,4 @@ class TextToSpeechGenerator:
 
     @staticmethod
     def play_speech():
-        os.system(f"mpg321 {Configuration.SPEECH_SAVE_PATH}/{Configuration.SPEECH_FILE_NAME}")
+        os.system(f"{Configuration.AUDIO_RUNNER} {Configuration.SPEECH_SAVE_PATH}{Configuration.SPEECH_FILE_NAME}")
