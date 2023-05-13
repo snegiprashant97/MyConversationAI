@@ -1,2 +1,4 @@
+.idea
 configuration/config.py
 converted_speech.mp3
+__pycache__/
