@@ -1,13 +1,8 @@
-from utility.text_to_speech_converter.TextToSpeechGenerator import TextToSpeechGenerator
-from utility.speech_to_text_converter.SpeechToTextGenerator import SpeechToTextGenerator
+from utility.openai.RequestHandler import RequestHandler
 
 if __name__ == "__main__":
-    # Test generate text
-    speech_obj = SpeechToTextGenerator()
-    speech_obj.listen_for_speech()
-    text = speech_obj.get_text()
-    print(text)
-
-    # Test generate speech
-    converted_obj = TextToSpeechGenerator(text)
-    converted_obj.play_speech()
+    obj = RequestHandler()
+    obj.get_prompt_from_user()
+    obj.play_response_as_a_speech()
+    transcript = obj.get_response_as_a_transcript()
+    print(transcript)

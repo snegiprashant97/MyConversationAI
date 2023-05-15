@@ -13,6 +13,7 @@ class SpeechToTextGenerator:
                 self.recognizer.adjust_for_ambient_noise(source, duration=0.2)
                 print("Speak...")
                 speech = self.recognizer.listen(source, phrase_time_limit=3)
+                print("Processing...")
                 self.__convert_to_text(speech)
         except Exception as e:
             print(e.__str__())
