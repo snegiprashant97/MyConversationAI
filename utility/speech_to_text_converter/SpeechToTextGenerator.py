@@ -1,6 +1,5 @@
 import speech_recognition as sr
 
-from configuration.config import Configuration
 
 class SpeechToTextGenerator:
 
