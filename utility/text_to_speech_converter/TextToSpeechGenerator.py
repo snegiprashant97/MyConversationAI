@@ -22,8 +22,7 @@ class TextToSpeechGenerator:
     def __save_speech_as_a_file(self):
         self.speech.save(Configuration.SPEECH_SAVE_PATH + Configuration.SPEECH_FILE_NAME)
 
-    @staticmethod
-    def play_speech():
+    def play_speech(self):
         """
         Plays the mp3 file generated in `__save_speech_as_a_file()` and then proceeds to delete it.
         :return: None
