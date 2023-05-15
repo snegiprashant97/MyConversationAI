@@ -14,10 +14,10 @@ class RequestHandler:
         self.temperature = 0.2
         self.response_message = None
 
-    def get_prompt_from_user(self):
+    def get_prompt_from_user(self, last_prompt):
         speech_obj = SpeechToTextGenerator()
         speech_obj.listen_for_speech()
-        prompt = speech_obj.get_text()
+        prompt = last_prompt + speech_obj.get_text()
         self.__send_prompt(prompt)
 
     def __send_prompt(self, prompt):
