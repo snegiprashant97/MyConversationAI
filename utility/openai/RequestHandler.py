@@ -63,7 +63,7 @@ class RequestHandler:
             stream=True
         )
 
-        limit = 5
+        limit = 10
         chunk_at = 0
         subtext = ''
         for chunk in response:
